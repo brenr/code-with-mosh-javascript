@@ -14,7 +14,7 @@ const execPermission = 1;
 let myPermission = 0;
 myPermission = myPermission | readPermission | writePermission;
 
-let message = (myPermission & readPermission) ? 'yes' : 'no':
+let message = myPermission & readPermission ? 'yes' : 'no';
 
 /**
  * Notes
@@ -24,7 +24,7 @@ let message = (myPermission & readPermission) ? 'yes' : 'no':
  *
  * Bitwise AND (&)
  * Returns 1 in the bit place if both are 1
- * 
+ *
  * Use case
  * Packing multiple values into a single integer.
  */
