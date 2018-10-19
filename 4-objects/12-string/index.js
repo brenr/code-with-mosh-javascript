@@ -26,6 +26,8 @@ message = "This is my 'first message"; // Escape characters with backslash
 message = 'This is my\n first message';
 // message -> "This is my
 //             first message"
+message.split(' '); // Splits a string by a specified character into an array
+// message -> ["This", "is", "my\n", "first", "message"]
 
 // String object
 const another = new String('hi');
