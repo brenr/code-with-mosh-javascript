@@ -4,7 +4,7 @@
  */
 
 // String primitive
-const message = 'This is my first message';
+let message = 'This is my first message';
 // typeof message -> "string"
 // message.length -> 24
 // message[0] -> "T"
