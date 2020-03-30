@@ -9,9 +9,9 @@ console.log(numbers); // -> [1, 2, 3, 4]
  */
 function arrayFromRange(min, max) {
     return new Array((max - min) + 1) // initialize array length for potential performance gains?
-        .fill(min) // populate with dummy values
+        .fill(0) // populate with dummy values
         .map(
-            (curr, index) => curr + index
+            (curr, index) => min + index
         );
 }
 
