@@ -1,4 +1,4 @@
-const numbers = arrayFromRange(-10, -4);
+const numbers = arrayFromRange(1, 2);
 
 console.log(numbers); // -> [1, 2, 3, 4]
 
@@ -8,7 +8,11 @@ console.log(numbers); // -> [1, 2, 3, 4]
  * @param max End number
  */
 function arrayFromRange(min, max) {
-    return new Array((max - min) + 1) // initialize array length for potential performance gains?
+    const LENGTH = max - min + 1;
+
+    if(LENGTH <= 0) return [];
+
+    return new Array(LENGTH) // initialize array length for potential performance gains?
         .fill(0) // populate with dummy values
         .map(
             (curr, index) => min + index
