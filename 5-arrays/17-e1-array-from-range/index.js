@@ -1,4 +1,4 @@
-const numbers = arrayFromRange(1, 4);
+const numbers = arrayFromRange(-10, -4);
 
 console.log(numbers); // -> [1, 2, 3, 4]
 
@@ -8,10 +8,13 @@ console.log(numbers); // -> [1, 2, 3, 4]
  * @param max End number
  */
 function arrayFromRange(min, max) {
-    const arr = new Array((max - min) + 1); // Initialize an array with a size equal to our range
-    const fuck = arr.map((currentValue, index) => {
-        console.log(currentValue, index);
-        return min + index;
-    });
-    return fuck;
+    return new Array((max - min) + 1) // initialize array length for potential performance gains?
+        .fill(min) // populate with dummy values
+        .map(
+            (curr, index) => curr + index
+        );
 }
+
+// Didn't want to take the iterative approach. Also would be interested in knowing if filling array with min value
+// and mapping over only adding the index is computationally equivalent to filling with dummy values, say 0,
+// and simply adding the min and index.
