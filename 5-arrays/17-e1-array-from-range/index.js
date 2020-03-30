@@ -8,11 +8,9 @@ console.log(numbers); // -> [1, 2, 3, 4]
  * @param max End number
  */
 function arrayFromRange(min, max) {
-    const LENGTH = max - min + 1;
+    if(min > max) return []; // We can't have a min greater than max, otherwise return empty array
 
-    if(LENGTH <= 0) return [];
-
-    return new Array(LENGTH) // initialize array length for potential performance gains?
+    return new Array(max - min + 1) // initialize array length for potential performance gains?
         .fill(0) // populate with dummy values
         .map(
             (curr, index) => min + index
