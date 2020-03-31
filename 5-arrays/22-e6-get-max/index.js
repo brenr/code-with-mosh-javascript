@@ -14,5 +14,5 @@ function getMax(array) {
     //return array.sort().pop();
 
     // Solution 2
-    array.reduce((acc, curr) => curr > acc ? curr : acc);
+   return array.reduce((acc, curr) => curr > acc ? curr : acc);
 }
