@@ -1,14 +1,11 @@
 
 // This method assumes either a variable number of args were passsed
 // or a singlular one-dimensional array was passed
-function sum(...nums) {
-    // Arg passed in was an array need to use that
-    if(Array.isArray(nums[0])) nums = nums[0];
+function sum(...items) {
+    if(items.length === 1 && Array.isArray(items[0]))
+        items = [...items[0]];
 
-
-    if(nums.length == 1) return nums[0];
-
-    return nums.reduce((a, b) => a + b);
+    return items.reduce((a, b) => a + b);
 }
 
 // Test 1
