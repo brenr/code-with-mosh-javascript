@@ -6,7 +6,9 @@ const output = move(numbers, 0, 1);
 console.log(output);
 
 function move(array, index, offset) {
-    if(index + offset > array.length - 1 || index + offset < 0) {
+    const TARGET_POS = index + offset;
+
+    if(TARGET_POS > array.length - 1 || TARGET_POS < 0) {
         console.error('Invalid offset.');
         return;
     }
@@ -15,10 +17,10 @@ function move(array, index, offset) {
     let copied = [...array];
 
     // Cache the target from the array
-    const target = copied.splice(index, 1)[0];
+    const targetVal = copied.splice(index, 1)[0];
 
     // Then we insert it at the correct index
-    copied.splice(index + offset, 0, target);
+    copied.splice(TARGET_POS, 0, targetVal);
 
     return copied;
 }
