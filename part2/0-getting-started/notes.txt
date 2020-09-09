@@ -1,1 +1,0 @@
-Unlike functional programming, object-oriented programming is another paradigm centered around objects
