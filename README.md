@@ -1,4 +1,6 @@
-# JavaScript Basics 
-The purpose of this repository is to contain the files I work with during the course, available at https://codewithmosh.com/.
+# Code With Mosh JavaScript Series
+Repository containing all [Code With Mosh](https://www.codewithmosh.com) curriculum work of the JavaScript series.
 
-The goal with this course is to harden my prior understanding of JavaScript fundamentals and to familiarize myself with the basics of git.
+### Series
+* Part 1: Basics
+* Part 2: Object-oriented Programming
