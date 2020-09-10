@@ -55,7 +55,7 @@ function Stopwatch() {
             return state.duration;
         },
         set: function () {
-            return new Error('Cannot explicitly set duration.');
+            throw new Error('Cannot explicitly set duration.');
         }
     });
 }
