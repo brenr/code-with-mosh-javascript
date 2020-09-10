@@ -18,6 +18,7 @@ function Stopwatch() {
         startTime: undefined,
         endTime: undefined
     }
+    const initialState = { ...state };
 
     const getLapsedTimeInSeconds = function (start, end) {
         return start && end && (end.getTime() - start.getTime()) / 1000 || 0;
@@ -41,10 +42,7 @@ function Stopwatch() {
     }
 
     this.reset = function () {
-        state.duration = 0;
-        state.isActive = false;
-        state.startTime = undefined;
-        state.endTime = undefined;
+        Object.assign(state, initialState);
     }
 
     Object.defineProperty(this, 'duration', {
